@@ -58,4 +58,19 @@ print(uppercase_filtered_words)  # Output: ['BANANA', 'CHERRY']
 - `map(lambda word: ..., words)` applies the lambda function to each item in the `words` list.
 - You can perform various operations like transforming, filtering, and combining data using lambda functions with `map`.
 
-Would you like to see more examples or a specific use case?
+
+Using Recursion as an Alternative
+
+You can mimic the behavior of a while loop in a recursive lambda function:
+
+```python
+
+repeat = lambda x: x if x >= 100 else repeat(x * 2)
+result = repeat(1)
+print(result)  # Output will be 128
+```
+
+In the above recursive lambda, the function repeat keeps calling itself, doubling the value until the condition (x >= 100) is met.
+Limitation
+
+Be careful with recursion in Python, as it can lead to a stack overflow if the recursion depth is too large. Python has a recursion limit (usually 1000 calls deep), which you can adjust but it’s generally better to use a loop for such tasks.
